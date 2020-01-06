@@ -13,6 +13,10 @@ namespace Zlozonosc.Helpers
             {
                 Console.Write(Messages.TryAgain);
             }
+            if(value < 2)
+            {
+                value = 2;
+            }
             return value;
         }
     }
