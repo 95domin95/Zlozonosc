@@ -17,21 +17,25 @@ namespace ZlozonoscAlgorithm
                 return 0;
             }
 
+            int iteration = 0;
+
             //Iterate all possible dimensions of nested rectangles
-            for(int i=0; i<lenght; i++)
+            for(int i=2; i<=lenght; i++)
             {
                 //Iterate over rows
-                for(int j=0; j<lenght-i; j++)
+                for(int j=0; j<=lenght-i; j++)
                 {
                     //Iterate over columns
-                    for(int k=0; k<lenght-i; k++)
+                    for(int k=0; k<=lenght-i; k++)
                     {
+                        iteration++;
+                        Console.WriteLine("Iteration: {0}", iteration);
                         #region Check proportions in rectangle
                         int zeroCount = 0;
                         int oneCount = 0;
-                        for(int l=j; l<j+lenght; l++)
+                        for(int l=j; l<j+i; l++)
                         {
-                            for(int m=k; m<k+lenght; m++)
+                            for(int m=k; m<k+i; m++)
                             {
                                 if(matrix[l, m] == 1)
                                 {
