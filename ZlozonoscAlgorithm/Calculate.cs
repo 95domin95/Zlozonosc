@@ -17,8 +17,6 @@ namespace ZlozonoscAlgorithm
                 return 0;
             }
 
-            int iteration = 0;
-
             //Iterate all possible dimensions of nested rectangles
             for(int i=2; i<=lenght; i++)
             {
@@ -28,8 +26,6 @@ namespace ZlozonoscAlgorithm
                     //Iterate over columns
                     for(int k=0; k<=lenght-i; k++)
                     {
-                        iteration++;
-                        Console.WriteLine("Iteration: {0}", iteration);
                         #region Check proportions in rectangle
                         int zeroCount = 0;
                         int oneCount = 0;
